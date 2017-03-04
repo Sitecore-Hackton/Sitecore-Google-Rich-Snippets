@@ -17,8 +17,8 @@ revision: 7803f5a4-a1ee-4e6a-af27-a1c18e0f1a61
 
 ----field----
 field: {0FF49C1D-0CC4-44CE-BB7A-E5A2BF213818}
-name: Default Item Field Name
-key: default item field name
+name: Item Field Name
+key: item field name
 content-length: 0
 
 

@@ -1,24 +1,38 @@
 ----item----
 version: 1
-id: {90376950-159E-4130-BB45-72DE869B734B}
+id: {CF6CE18A-BBFA-4DEE-BDED-7FCEF8C064A5}
 database: master
-path: /sitecore/system/Modules/Sitecore Google Structure Data/Metadata/Override Fields/Breadcrumbs/Name
-parent: {A192D402-D0FB-4784-9503-BC46CE2086B3}
-name: Name
+path: /sitecore/system/Modules/Sitecore Google Structure Data/Mappings/Templates/News Article Mapping
+parent: {86AD1CD1-9114-4781-8DB8-4F10B2EFF960}
+name: News Article Mapping
 master: {00000000-0000-0000-0000-000000000000}
-template: {6DAEA56C-DB28-4FC1-A507-38F0E8FA1840}
-templatekey: Data Field
-created: 20170304T055304Z
+template: {24D4C66D-33AF-4147-9C64-3BB690346D3D}
+templatekey: Template Mapping
+created: 20170304T055343Z
 
 ----version----
 language: en
 version: 1
-revision: d845df17-8b65-464c-9418-69815062a5c3
+revision: 104ca947-8537-4581-82d7-8d077da8037e
 
 ----field----
-field: {0FF49C1D-0CC4-44CE-BB7A-E5A2BF213818}
-name: Item Field Name
-key: item field name
+field: {EBC4E9B9-38EA-4719-B08C-65566FA12CF4}
+name: Structure Data Type
+key: structure data type
+content-length: 38
+
+{FBDE3F28-6E51-4463-9597-71659833711F}
+----field----
+field: {3EF3EA91-4888-48D5-AD83-F2E41C43605F}
+name: Template
+key: template
+content-length: 38
+
+{B69277AD-E917-4B9F-9136-A12E0A3E462F}
+----field----
+field: {B7D68ED6-FED3-4A89-A5B4-3FC6F3EBFDA8}
+name: Field Mappings
+key: field mappings
 content-length: 0
 
 
@@ -35,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170304T050951Z
+20170304T055343Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d845df17-8b65-464c-9418-69815062a5c3
+104ca947-8537-4581-82d7-8d077da8037e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T055123Z
+20170304T095905Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

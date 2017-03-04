@@ -1,19 +1,19 @@
 ----item----
 version: 1
-id: {90376950-159E-4130-BB45-72DE869B734B}
+id: {2900D215-9EE3-4CC7-B7E6-B7D78217EB9A}
 database: master
-path: /sitecore/system/Modules/Sitecore Google Structure Data/Metadata/Override Fields/Breadcrumbs/Name
-parent: {A192D402-D0FB-4784-9503-BC46CE2086B3}
-name: Name
+path: /sitecore/system/Modules/Sitecore Google Structure Data/Structure Data Types/Article/MainEntryOfPage
+parent: {FBDE3F28-6E51-4463-9597-71659833711F}
+name: MainEntryOfPage
 master: {00000000-0000-0000-0000-000000000000}
 template: {6DAEA56C-DB28-4FC1-A507-38F0E8FA1840}
 templatekey: Data Field
-created: 20170304T055304Z
+created: 20170304T095827Z
 
 ----version----
 language: en
 version: 1
-revision: d845df17-8b65-464c-9418-69815062a5c3
+revision: b0bd22e1-78b3-46e7-94c6-dd4d1137c5c0
 
 ----field----
 field: {0FF49C1D-0CC4-44CE-BB7A-E5A2BF213818}
@@ -22,6 +22,13 @@ key: item field name
 content-length: 0
 
 
+----field----
+field: {DC6EFF5A-03EC-47DE-A3F5-BC5C7E9D0B88}
+name: Type Name
+key: type name
+content-length: 104
+
+Sitecore.Feature.GoogleStructureData.FieldValueResolvers.GetItemUrl,Sitecore.Feature.GoogleStructureData
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -35,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170304T050951Z
+20170304T095650Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d845df17-8b65-464c-9418-69815062a5c3
+b0bd22e1-78b3-46e7-94c6-dd4d1137c5c0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T055123Z
+20170304T095844Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

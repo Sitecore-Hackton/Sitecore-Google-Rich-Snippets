@@ -41,5 +41,10 @@ namespace Sitecore.Feature.GoogleStructureData
         public static readonly ID DividerBefore = new ID("{4231CD60-47C1-42AD-B838-0A6F8F1C4CFB}");
       }
     }
+
+        public struct StructureDataType
+        {
+            public static readonly ID ID = new ID("{3A710A44-6A86-4B9E-9D86-64D229902149}");
+        }
   }
 }

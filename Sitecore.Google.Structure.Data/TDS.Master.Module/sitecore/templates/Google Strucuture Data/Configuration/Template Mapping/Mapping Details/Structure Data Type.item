@@ -1,33 +1,40 @@
 ----item----
 version: 1
-id: {79C08F7A-78C5-42BB-8C0B-11EE56302C5E}
+id: {EBC4E9B9-38EA-4719-B08C-65566FA12CF4}
 database: master
-path: /sitecore/layout/Renderings/Feature/Google Structure Data/Article Detail
-parent: {D6AEFD14-D985-474F-BAD2-39E3E0C43CF0}
-name: Article Detail
+path: /sitecore/templates/Google Strucuture Data/Configuration/Template Mapping/Mapping Details/Structure Data Type
+parent: {E0EA9520-1CBC-4DDF-A941-A377B294EE5E}
+name: Structure Data Type
 master: {00000000-0000-0000-0000-000000000000}
-template: {99F8905D-4A87-4EB8-9F8B-A9BEBFB3ADD6}
-templatekey: View rendering
-created: 20170304T041713Z
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
+created: 20170304T094530Z
 
 ----field----
-field: {51B435BC-F7B9-478A-9C51-52916AF96FF5}
-name: Path
-key: path
-content-length: 41
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 8
 
-/Views/GoogleStructureData/Article.cshtml
+Droplink
 ----field----
-field: {DDAB263E-B42E-419A-AA6F-081B7393CA38}
-name: Model
-key: model
-content-length: 72
+field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
+name: Source
+key: source
+content-length: 124
 
-/sitecore/layout/Models/Feature/Google Structure Data/DataRenderingModel
+query:./ancestor-or-self::*[@@templatename='Sitecore Google Structure Data Folder']//*[@@templatename='Structure Data Type']
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 2
+
+50
 ----version----
 language: en
 version: 1
-revision: 73548d45-4207-49ec-8880-e30040bdf67f
+revision: d50e3104-f3a7-4263-8c6c-e281ddae6fca
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170304T041713Z
+20170304T094530Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-73548d45-4207-49ec-8880-e30040bdf67f
+d50e3104-f3a7-4263-8c6c-e281ddae6fca
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T112303Z
+20170304T094632Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

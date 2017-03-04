@@ -1,26 +1,19 @@
 ----item----
 version: 1
-id: {90376950-159E-4130-BB45-72DE869B734B}
+id: {FBDE3F28-6E51-4463-9597-71659833711F}
 database: master
-path: /sitecore/system/Modules/Sitecore Google Structure Data/Metadata/Override Fields/Breadcrumbs/Name
-parent: {A192D402-D0FB-4784-9503-BC46CE2086B3}
-name: Name
+path: /sitecore/system/Modules/Sitecore Google Structure Data/Structure Data Types/Article
+parent: {CBC390B1-28EC-41D4-A02D-C97C9F0BC91B}
+name: Article
 master: {00000000-0000-0000-0000-000000000000}
-template: {6DAEA56C-DB28-4FC1-A507-38F0E8FA1840}
-templatekey: Data Field
-created: 20170304T055304Z
+template: {3A710A44-6A86-4B9E-9D86-64D229902149}
+templatekey: Structure Data Type
+created: 20170304T094348Z
 
 ----version----
 language: en
 version: 1
-revision: d845df17-8b65-464c-9418-69815062a5c3
-
-----field----
-field: {0FF49C1D-0CC4-44CE-BB7A-E5A2BF213818}
-name: Item Field Name
-key: item field name
-content-length: 0
-
+revision: 906856fd-a88b-43bd-beee-6b8d1a48f9e1
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,7 +28,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170304T050951Z
+20170304T094348Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d845df17-8b65-464c-9418-69815062a5c3
+906856fd-a88b-43bd-beee-6b8d1a48f9e1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T055123Z
+20170304T094348Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
