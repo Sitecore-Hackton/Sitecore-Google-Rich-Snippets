@@ -111,8 +111,10 @@
     <Compile Include="FieldValueResolvers\GetItemUrl.cs" />
     <Compile Include="FieldValueResolvers\GetItemName.cs" />
     <Compile Include="FieldValueResolvers\DataFieldWrapper.cs" />
-    <Compile Include="Models\OrganizationObject.cs" />
-    <Compile Include="Models\ImageObject.cs" />
+    <Compile Include="StructureDataObjects\DateObject.cs" />
+    <Compile Include="StructureDataObjects\BaseObject.cs" />
+    <Compile Include="StructureDataObjects\OrganizationObject.cs" />
+    <Compile Include="StructureDataObjects\ImageObject.cs" />
     <Compile Include="Models\DataField.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\NavigationItems.cs" />

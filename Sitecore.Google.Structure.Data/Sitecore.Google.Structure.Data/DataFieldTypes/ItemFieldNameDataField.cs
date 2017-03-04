@@ -6,7 +6,6 @@ namespace Sitecore.Feature.GoogleStructureData.DataFieldTypes
     {
         public string ItemFieldName { get; set; }
 
-
         public override object Execute(Item item)
         {
             if (item == null)

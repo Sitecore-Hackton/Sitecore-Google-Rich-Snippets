@@ -13,14 +13,15 @@
         By <span itemprop="name">John Doe</span>
     </h3>
     <span itemprop="description">@Model.Field(Constants.Items.ArticleFieldItems.HeadlineFieldID)</span>
-    
-    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+    @Model.RenderObject(Constants.Items.ArticleFieldItems.ImageFieldID)
+    @*<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <img src="https://google.com/thumbnail1.jpg"/>
         <meta itemprop="url" content="https://google.com/thumbnail1.jpg">
         <meta itemprop="width" content="800">
         <meta itemprop="height" content="800">
-    </div>
-    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+    </div>*@
+    @Model.RenderObject(Constants.Items.ArticleFieldItems.PublishedFieldID)
+    @*<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
         <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
             <img src="https://google.com/logo.jpg"/>
             <meta itemprop="url" content="https://google.com/logo.jpg">
@@ -28,7 +29,8 @@
             <meta itemprop="height" content="60">
         </div>
         <meta itemprop="name" content="Google">
-    </div>
-    <meta itemprop="datePublished" content="2015-02-05T08:00:00+08:00"/>
-    <meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00"/>
+    </div>*@
+    <meta itemprop="datePublished" content="@Model.DateObject(Constants.Items.ArticleFieldItems.DatePublishedFieldID)" />
+    @*<meta itemprop="datePublished" content="2015-02-05T08:00:00+08:00"/>
+    <meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00"/>*@
 </div>

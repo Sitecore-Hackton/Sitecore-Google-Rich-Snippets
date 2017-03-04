@@ -5,6 +5,7 @@ using Sitecore.Data.Items;
 using Sitecore.Feature.GoogleStructureData.DataFieldTypes;
 using Sitecore.Feature.GoogleStructureData.FieldValueResolvers;
 using Sitecore.Feature.GoogleStructureData.Models;
+using Sitecore.Feature.GoogleStructureData.StructureDataObjects;
 using Sitecore.Foundation.SitecoreExtensions.Extensions;
 using Sitecore.Mvc.Helpers;
 using Sitecore.Mvc.Presentation;
@@ -65,6 +66,45 @@ namespace Sitecore.Feature.GoogleStructureData.ViewModels
             if (mappedFieldId.IsNull)
                 return null;
             return this.Rendering.Item.Field(mappedFieldId);
+        }
+
+        public HtmlString RenderImageObject(ID fieldId)
+        {
+            if (FieldExists(fieldId))
+            {
+                var obj = _fields[fieldId.ToString()].GetFieldValue<object>(this.Rendering.Item);
+                if (obj != null)
+                {
+                    return new ImageObject().Render(obj);
+                }
+            }
+            return new HtmlString("");
+        }
+
+        public HtmlString RenderPublisherObject(ID fieldId)
+        {
+            if (FieldExists(fieldId))
+            {
+                var obj = _fields[fieldId.ToString()].GetFieldValue<object>(this.Rendering.Item);
+                if (obj != null)
+                {
+                    return new OrganizationObject().Render(obj);
+                }
+            }
+            return new HtmlString("");
+        }
+
+        public HtmlString DateObject(ID fieldId)
+        {
+            if (FieldExists(fieldId))
+            {
+                var obj = _fields[fieldId.ToString()].GetFieldValue<object>(this.Rendering.Item);
+                if (obj != null)
+                {
+                    return new DateObject().Render(obj);
+                }
+            }
+            return new HtmlString("");
         }
     }
 
