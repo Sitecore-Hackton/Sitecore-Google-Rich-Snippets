@@ -4,6 +4,9 @@ using Sitecore.Mvc.Presentation;
 
 namespace Sitecore.Feature.GoogleStructureData.Controllers
 {
+    /// <summary>
+    /// Controller class.
+    /// </summary>
     public class GoogleStructureDataController : Controller
   {
     private readonly INavigationRepository _navigationRepository;

@@ -6,6 +6,9 @@ using Sitecore.Foundation.SitecoreExtensions.Extensions;
 
 namespace Sitecore.Feature.GoogleStructureData.DataFieldTypes
 {
+    /// <summary>
+    /// Class to define a field definition where field value will be received from a sitecore field that is on current rendering item.
+    /// </summary>
     public class ItemFieldNameDataField : BaseDataField
     {
         public ItemFieldNameDataField(Item item) : base(item)

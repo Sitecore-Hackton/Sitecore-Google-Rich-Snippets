@@ -6,6 +6,10 @@ using Sitecore.Data.Fields;
 
 namespace Sitecore.Feature.GoogleStructureData.DataFieldTypes
 {
+    /// <summary>
+    /// Class to define a field definition where field value will be received from a sitecore field that is on current rendering item.
+    /// The field value is treated as a reference to another sitecore item and than actual value received from that reference item using the field on that reference item.
+    /// </summary>
     public class ReferenceItemFieldNameDataField : BaseDataField
     {
         public ReferenceItemFieldNameDataField(Item item) : base(item)

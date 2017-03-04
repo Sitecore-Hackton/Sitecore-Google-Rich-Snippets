@@ -9,6 +9,9 @@ using Sitecore.Xml;
 
 namespace Sitecore.Feature.GoogleStructureData.StructureDataObjects
 {
+    /// <summary>
+    /// This type defines the structured data value for the Image types.
+    /// </summary>
     public class ImageObject : BaseObject
     {
         public string Url { get; set; }

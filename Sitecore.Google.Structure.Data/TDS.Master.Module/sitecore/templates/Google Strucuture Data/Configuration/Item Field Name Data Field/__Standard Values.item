@@ -1,34 +1,27 @@
 ----item----
 version: 1
-id: {C57A18D6-1E2D-473B-88EE-A36E1467CAEE}
+id: {7894DE24-0874-464A-962A-635D7CDDE49E}
 database: master
-path: /sitecore/system/Modules/Sitecore Google Structure Data/Structure Data Types/Article/Headline/Override Field Name
-parent: {07EA7C29-1CE3-4304-8AEC-9C5E851571D1}
-name: Override Field Name
+path: /sitecore/templates/Google Strucuture Data/Configuration/Item Field Name Data Field/__Standard Values
+parent: {6DAEA56C-DB28-4FC1-A507-38F0E8FA1840}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {5CCDEBF2-7069-4FFF-8E01-E1F3EC5E5947}
-templatekey: Override Item Field Name Data Field
-created: 20170304T134058Z
+template: {6DAEA56C-DB28-4FC1-A507-38F0E8FA1840}
+templatekey: Item Field Name Data Field
+created: 20170304T184244Z
 
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 116
+
+{5CCDEBF2-7069-4FFF-8E01-E1F3EC5E5947}|{B6A4CEDF-8565-410B-8C8B-34DB3267E924}|{2D3B4F77-5BAE-4D35-9D77-12D9EF132E61}
 ----version----
 language: en
 version: 1
-revision: 5d6c700e-e395-4f33-9a10-ef4256943ac1
+revision: c21e0103-7452-40fe-8c13-5e0029b61ca2
 
-----field----
-field: {25CC1F1C-D331-47FC-8A86-92398C2CE3C7}
-name: Item Field Name
-key: item field name
-content-length: 12
-
-ServiceTitle
-----field----
-field: {6D4C1301-8849-455C-B8F5-D8E2F20FC84B}
-name: Templates
-key: templates
-content-length: 38
-
-{4A8822CC-B418-4452-AB0F-8BB6DF2F2114}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170304T134058Z
+20170304T184244Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5d6c700e-e395-4f33-9a10-ef4256943ac1
+c21e0103-7452-40fe-8c13-5e0029b61ca2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T144814Z
+20170304T184312Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

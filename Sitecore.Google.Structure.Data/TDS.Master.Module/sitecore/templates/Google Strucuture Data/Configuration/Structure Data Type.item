@@ -17,10 +17,17 @@ key: __base template
 content-length: 38
 
 {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 22
+
+Imaging/32x32/skew.png
 ----version----
 language: en
 version: 1
-revision: 0935dc41-b78d-4bdd-a863-d9c5986d8fc6
+revision: 54afe2b4-ad9f-4dd8-a59c-96229774ca21
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0935dc41-b78d-4bdd-a863-d9c5986d8fc6
+54afe2b4-ad9f-4dd8-a59c-96229774ca21
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T094241Z
+20170304T170247Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

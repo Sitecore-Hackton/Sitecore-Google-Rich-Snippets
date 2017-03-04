@@ -9,6 +9,9 @@ using Sitecore.Xml;
 
 namespace Sitecore.Feature.GoogleStructureData.StructureDataObjects
 {
+    /// <summary>
+    /// This type defines the structured data value for the publisher information.
+    /// </summary>
     public class OrganizationObject : BaseObject
     {
         public string Url { get; set; }

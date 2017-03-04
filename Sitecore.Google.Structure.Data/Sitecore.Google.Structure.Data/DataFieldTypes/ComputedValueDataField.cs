@@ -6,6 +6,9 @@ using Sitecore.Mvc.Helpers;
 
 namespace Sitecore.Feature.GoogleStructureData.DataFieldTypes
 {
+    /// <summary>
+    /// Class to define a field definition where field value will be received from a Type method.
+    /// </summary>
     public class ComputedValueDataField : BaseDataField
     {
         public ComputedValueDataField(Item item) : base(item)

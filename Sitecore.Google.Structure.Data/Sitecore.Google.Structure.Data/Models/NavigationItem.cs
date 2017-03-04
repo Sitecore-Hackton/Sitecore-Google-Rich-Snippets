@@ -2,6 +2,9 @@ using Sitecore.Data.Items;
 
 namespace Sitecore.Feature.GoogleStructureData.Models
 {
+    /// <summary>
+    /// Defines the details for a navigation item.
+    /// </summary>
     public class NavigationItem
     {
         public Item Item { get; set; }

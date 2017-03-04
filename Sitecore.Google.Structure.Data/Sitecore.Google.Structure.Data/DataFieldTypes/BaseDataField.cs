@@ -3,6 +3,9 @@ using Sitecore.Data.Items;
 
 namespace Sitecore.Feature.GoogleStructureData.DataFieldTypes
 {
+    /// <summary>
+    /// Class defines the base type for all field type definition fields.
+    /// </summary>
     public abstract class BaseDataField
     {
         protected Item Item;

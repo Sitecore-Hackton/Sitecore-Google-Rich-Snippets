@@ -17,10 +17,17 @@ key: __base template
 content-length: 38
 
 {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 23
+
+Imaging/32x32/scale.png
 ----version----
 language: en
 version: 1
-revision: 497aaed0-9978-4669-bc0e-c310ddf73647
+revision: aff79b2d-7c54-4ba0-806e-a289d4218704
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-497aaed0-9978-4669-bc0e-c310ddf73647
+aff79b2d-7c54-4ba0-806e-a289d4218704
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T144627Z
+20170304T165547Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

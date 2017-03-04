@@ -8,6 +8,9 @@ using Sitecore.Mvc.Helpers;
 
 namespace Sitecore.Feature.GoogleStructureData.FieldValueResolvers
 {
+    /// <summary>
+    /// This is a wrapper class to manage the operations with various types of fields.
+    /// </summary>
     public class DataFieldWrapper
     {
         private BaseDataField _dataField;
@@ -22,6 +25,11 @@ namespace Sitecore.Feature.GoogleStructureData.FieldValueResolvers
         public HtmlString Field()
         {
             return _dataField.Render();
+        }
+
+        public bool IsEditable()
+        {
+            return _dataField.IsEditable;
         }
 
         public ID GetFieldId()

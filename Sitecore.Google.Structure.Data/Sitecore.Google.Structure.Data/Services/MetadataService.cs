@@ -10,6 +10,14 @@ using Sitecore.Mvc.Presentation;
 
 namespace Sitecore.Feature.GoogleStructureData.Services
 {
+    /// <summary>
+    /// This class defines the mapping logic for a particular structured data rendering and all its configured field mappings.
+    /// The current code is limited to work only for article detail rendering.
+    /// The logic trverse all the field definitions those are defined under article type in module settings section.
+    /// It checks the whether an override is defined for template or not. if yes it treats that as field definition.
+    /// If not found than it checks if an override defined for global field definition, if found it picks that.
+    /// If not than it picks the default one. 
+    /// </summary>
     public class MetadataService
     {
         private IDictionary<string, DataFieldWrapper> _fields = new Dictionary<string, DataFieldWrapper>();
@@ -25,6 +33,12 @@ namespace Sitecore.Feature.GoogleStructureData.Services
 
             return _fields;
         }
+
+        /// <summary>
+        /// Loop through all fields defined under the Article type in sitecore.
+        /// </summary>
+        /// <param name="rendering"></param>
+        /// <returns></returns>
 
         private IDictionary<string, DataFieldWrapper> FillMapping(Rendering rendering)
         {
@@ -74,7 +88,11 @@ namespace Sitecore.Feature.GoogleStructureData.Services
             return _fields;
         }
 
-
+        /// <summary>
+        /// Add specific field type class in the collection based on the field definition template.
+        /// </summary>
+        /// <param name="fieldMetadataItem"></param>
+        /// <param name="fieldDefinitionItem"></param>
         private void AddField(Item fieldMetadataItem, Item fieldDefinitionItem)
         {
             switch (fieldDefinitionItem.TemplateID.ToString())

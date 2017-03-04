@@ -13,15 +13,15 @@ created: 20170304T124330Z
 ----version----
 language: en
 version: 1
-revision: 2c07827e-af8e-48a4-ac6e-92b07843b41c
+revision: 65063e8a-b250-4142-95ad-da64a526582c
 
 ----field----
 field: {0FF49C1D-0CC4-44CE-BB7A-E5A2BF213818}
 name: Item Field Name
 key: item field name
-content-length: 11
+content-length: 8
 
-PublishDate
+NewsDate
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2c07827e-af8e-48a4-ac6e-92b07843b41c
+65063e8a-b250-4142-95ad-da64a526582c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T140736Z
+20170304T161423Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
