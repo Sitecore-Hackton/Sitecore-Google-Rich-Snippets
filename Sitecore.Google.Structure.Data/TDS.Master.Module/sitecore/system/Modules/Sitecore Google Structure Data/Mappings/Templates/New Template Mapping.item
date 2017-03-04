@@ -13,8 +13,22 @@ created: 20170304T055343Z
 ----version----
 language: en
 version: 1
-revision: 0032a95e-7cf9-4b1f-a9a7-7ab8c19958a6
+revision: b1042843-92cb-421a-b892-2f60326dc345
 
+----field----
+field: {3EF3EA91-4888-48D5-AD83-F2E41C43605F}
+name: Template
+key: template
+content-length: 38
+
+{54BCFFB7-8F46-4948-AE74-DA5B6B5AFA86}
+----field----
+field: {B7D68ED6-FED3-4A89-A5B4-3FC6F3EBFDA8}
+name: Field Mappings
+key: field mappings
+content-length: 38
+
+{11A34AC2-674D-4138-BF61-7C7AA46495FA}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0032a95e-7cf9-4b1f-a9a7-7ab8c19958a6
+b1042843-92cb-421a-b892-2f60326dc345
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T055343Z
+20170304T060231Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
