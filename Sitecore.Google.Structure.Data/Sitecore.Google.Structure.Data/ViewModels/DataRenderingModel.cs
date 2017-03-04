@@ -71,7 +71,7 @@ namespace Sitecore.Feature.GoogleStructureData.ViewModels
     public class FieldInfo
     {
         private string _fieldName;
-        private ID _fieldId;
+        private ID _fieldId = ID.Null;
         private string _fieldValue;
 
         private DataField _dataField;
