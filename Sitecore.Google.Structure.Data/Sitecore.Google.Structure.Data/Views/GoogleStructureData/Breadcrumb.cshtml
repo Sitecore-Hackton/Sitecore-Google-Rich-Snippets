@@ -1,0 +1,21 @@
+﻿@using Sitecore.Feature.GoogleStructureData
+@using Sitecore.Foundation.SitecoreExtensions.Extensions
+@model Sitecore.Feature.GoogleStructureData.Models.NavigationItems
+
+@{
+    var position = 1;
+}
+<div class="container">
+    <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        @foreach (var item in Model.Items)
+        {
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="@(item.IsActive ? "active" : string.Empty)">
+                <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="@item.Item.Url()">
+                    <span itemprop="name">@Html.Sitecore().Field(Templates.Navigable.Fields.NavigationTitle, item.Item)</span>
+                    <img itemprop="image" src="http://example.com/images/icon-bookicon.png" alt="Books" />
+                </a>
+                <meta itemprop="position" content="@(position++)" />
+            </li>
+        }
+    </ol>
+</div>
