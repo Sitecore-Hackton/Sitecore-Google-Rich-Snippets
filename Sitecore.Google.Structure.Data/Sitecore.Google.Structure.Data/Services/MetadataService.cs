@@ -28,33 +28,45 @@ namespace Sitecore.Feature.GoogleStructureData.Services
 
         private IDictionary<string, DataFieldWrapper> FillMapping(Rendering rendering)
         {
-            var articleMappings = Context.Database.GetItem(Constants.RenderingTypeSitecore.ArticleMappingId);
+            var typeItem = Context.Database.GetItem(Constants.RenderingTypeSitecore.ArticleMappingId);
 
-            if (!articleMappings.HasChildren)
+            if (!typeItem.HasChildren)
             {
                 return _fields;
             }
 
-            foreach (Item mappingChildern in articleMappings.Children)
+            foreach (Item fieldMetadataItem in typeItem.Children)
             {
-                if (!mappingChildern.HasChildren)
+                if (!fieldMetadataItem.HasChildren)
                 {
-                    AddField(articleMappings, mappingChildern);
-                    return _fields;
+                    AddField(fieldMetadataItem, fieldMetadataItem);
                 }
-
-                foreach (Item mappingChildernChildern in mappingChildern.Children)
+                else
                 {
-
-                    MultilistField multilistField = mappingChildernChildern.Fields[Constants.DataFieldItemName.OverrideTemplate];
-
-                    if (multilistField == null)
+                    Item defaultOverride = fieldMetadataItem;
+                    bool matchFound = false;
+                    foreach (Item fieldDefinitionItem in fieldMetadataItem.Children)
                     {
-                        continue;
+
+                        MultilistField multilistField =
+                            fieldDefinitionItem.Fields[Constants.DataFieldItemName.OverrideTemplate];
+
+                        if (multilistField == null)
+                        {
+                            defaultOverride = fieldDefinitionItem;
+                            continue;
+                        }
+
+                        if (multilistField.TargetIDs.Contains(rendering.Item.TemplateID))
+                        {
+                            AddField(fieldMetadataItem, fieldDefinitionItem);
+                            matchFound = true;
+                        }
                     }
-                    if (multilistField.TargetIDs.Contains(rendering.Item.TemplateID))
+
+                    if (!matchFound)
                     {
-                        AddField(articleMappings, mappingChildern);
+                        AddField(fieldMetadataItem, defaultOverride);
                     }
                 }
             }
@@ -63,19 +75,19 @@ namespace Sitecore.Feature.GoogleStructureData.Services
         }
 
 
-        private void AddField(Item parnetItem, Item item)
+        private void AddField(Item fieldMetadataItem, Item fieldDefinitionItem)
         {
-            switch (item.TemplateID.ToString())
+            switch (fieldDefinitionItem.TemplateID.ToString())
             {
                 case Constants.GstructuredTemplate.ItemFieldNameDataField:
                 case Constants.GstructuredTemplate.OverrideItemFieldNameDataField:
                     {
                         var fielditem = new ItemFieldNameDataField(_rendering.Item)
                         {
-                            ItemFieldName = item.Fields[Constants.DataFieldItemName.ItemFieldName].Value
+                            ItemFieldName = fieldDefinitionItem.Fields[Constants.DataFieldItemName.ItemFieldName].Value
                         };
 
-                        _fields.Add(parnetItem.ID.ToString(), new DataFieldWrapper(fielditem));
+                        _fields.Add(fieldMetadataItem.ID.ToString(), new DataFieldWrapper(fielditem));
                         break;
                     }
                 case Constants.GstructuredTemplate.ComputedValueDataField:
@@ -83,10 +95,10 @@ namespace Sitecore.Feature.GoogleStructureData.Services
                     {
                         var fielditem = new ComputedValueDataField(_rendering.Item)
                         {
-                            TypeName = item.Fields[Constants.DataFieldItemName.FiledTypeName].Value
+                            TypeName = fieldDefinitionItem.Fields[Constants.DataFieldItemName.FiledTypeName].Value
                         };
 
-                        _fields.Add(parnetItem.ID.ToString(), new DataFieldWrapper(fielditem));
+                        _fields.Add(fieldMetadataItem.ID.ToString(), new DataFieldWrapper(fielditem));
 
                         break;
                     }
@@ -95,11 +107,11 @@ namespace Sitecore.Feature.GoogleStructureData.Services
                     {
                         var fielditem = new ReferenceItemFieldNameDataField(_rendering.Item)
                         {
-                            ItemFieldName = item.Fields[Constants.DataFieldItemName.ItemFieldName].Value,
-                            ReferenceItemTemplateId = item.Fields[Constants.DataFieldItemName.FiledTypeName].Value,
-                            RefernceItemFieldName = item.Fields[Constants.DataFieldItemName.ReferenceItemFieldName].Value
+                            ItemFieldName = fieldDefinitionItem.Fields[Constants.DataFieldItemName.ItemFieldName].Value,
+                            ReferenceItemTemplateId = fieldDefinitionItem.Fields[Constants.DataFieldItemName.ReferenceItemTemplate].Value,
+                            RefernceItemFieldName = fieldDefinitionItem.Fields[Constants.DataFieldItemName.ReferenceItemFieldName].Value
                         };
-                        _fields.Add(parnetItem.ID.ToString(), new DataFieldWrapper(fielditem));
+                        _fields.Add(fieldMetadataItem.ID.ToString(), new DataFieldWrapper(fielditem));
 
                         break;
                     }

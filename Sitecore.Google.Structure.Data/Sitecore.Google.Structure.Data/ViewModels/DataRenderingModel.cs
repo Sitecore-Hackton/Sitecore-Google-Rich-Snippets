@@ -109,7 +109,14 @@ namespace Sitecore.Feature.GoogleStructureData.ViewModels
 
         public HtmlString Field(ID fieldId)
         {
-            return _fields[fieldId.ToString()].Field();
+            if (FieldExists(fieldId))
+            {
+                var field = _fields[fieldId.ToString()];
+                if (field != null)
+                    return field.Field();
+            }
+
+            return new HtmlString(string.Empty);
         }
 
         public HtmlString RenderImageObject(ID fieldId)
