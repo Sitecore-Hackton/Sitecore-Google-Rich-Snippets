@@ -12,8 +12,8 @@ namespace Sitecore.Feature.GoogleStructureData.StructureDataObjects
             {
                 value = field.Value;
             }
-
-            return null;
+            
+            return new HtmlString(value.ToString());
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Sitecore.Data;
+﻿using System.Web;
+using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Feature.GoogleStructureData.FieldValueResolvers;
 using Sitecore.Mvc.Helpers;
@@ -7,11 +8,15 @@ namespace Sitecore.Feature.GoogleStructureData.DataFieldTypes
 {
     public class ComputedValueDataField : BaseDataField
     {
+        public ComputedValueDataField(Item item) : base(item)
+        {
+        }
+
         public string TypeName { get; set; }
 
-        public override object Execute(Item item)
+        public override object Execute()
         {
-            if (item == null)
+            if (Item == null)
                 return null;
 
             if (!string.IsNullOrEmpty(TypeName) && TypeHelper.LooksLikeTypeName(TypeName))
@@ -19,13 +24,25 @@ namespace Sitecore.Feature.GoogleStructureData.DataFieldTypes
                 var resolver = TypeHelper.CreateObject(TypeName) as BaseFieldValueResolver;
                 if (resolver != null)
                 {
-                    return resolver.Execute(item);
+                    return resolver.Execute(Item);
                 }
             }
 
             return null;
         }
 
-        public override bool IsEditable { get { return false; } }
+        public override bool IsEditable
+        {
+            get
+            {
+                return false;
+                
+            }
+        }
+
+        public override HtmlString Render()
+        {
+            return new HtmlString(Execute().ToString());
+        }
     }
 }

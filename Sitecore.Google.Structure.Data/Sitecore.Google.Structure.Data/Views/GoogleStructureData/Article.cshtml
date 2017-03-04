@@ -6,31 +6,21 @@
 <div itemscope itemtype="http://schema.org/NewsArticle">
     @if (Model.HasValueFor(Constants.Items.ArticleFieldItems.MainEntryofPageFieldID))
     {
-        <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="@Model.GetStringValue(Constants.Items.ArticleFieldItems.MainEntryofPageFieldID))"/>
+        <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="@Model.GetStringValue(Constants.Items.ArticleFieldItems.MainEntryofPageFieldID))" />
     }
     <h2 itemprop="headline">@Model.Field(Constants.Items.ArticleFieldItems.HeadlineFieldID)</h2>
-    <h3 itemprop="author" itemscope itemtype="https://schema.org/Person">
-        By <span itemprop="name">John Doe</span>
-    </h3>
-    <span itemprop="description">@Model.Field(Constants.Items.ArticleFieldItems.HeadlineFieldID)</span>
-    @Model.RenderObject(Constants.Items.ArticleFieldItems.ImageFieldID)
-    @*<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        <img src="https://google.com/thumbnail1.jpg"/>
-        <meta itemprop="url" content="https://google.com/thumbnail1.jpg">
-        <meta itemprop="width" content="800">
-        <meta itemprop="height" content="800">
-    </div>*@
-    @Model.RenderObject(Constants.Items.ArticleFieldItems.PublishedFieldID)
-    @*<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-            <img src="https://google.com/logo.jpg"/>
-            <meta itemprop="url" content="https://google.com/logo.jpg">
-            <meta itemprop="width" content="600">
-            <meta itemprop="height" content="60">
-        </div>
-        <meta itemprop="name" content="Google">
-    </div>*@
+
+    @if (Model.HasValueFor(Constants.Items.ArticleFieldItems.AuthorFieldID))
+    {
+        <h3 itemprop="author" itemscope itemtype="https://schema.org/Person">
+            By <span itemprop="name">@Model.Field(Constants.Items.ArticleFieldItems.AuthorFieldID)</span>
+        </h3>
+    }
+    <span itemprop="description">@Model.Field(Constants.Items.ArticleFieldItems.DescriptionFieldID)</span>
+    @Model.RenderImageObject(Constants.Items.ArticleFieldItems.ImageFieldID)
+    @Model.RenderPublisherObject(Constants.Items.ArticleFieldItems.PublisherFieldID)
     <meta itemprop="datePublished" content="@Model.DateObject(Constants.Items.ArticleFieldItems.DatePublishedFieldID)" />
+    <meta itemprop="dateModified" content="@Model.DateObject(Constants.Items.ArticleFieldItems.DateModifiedFieldID)" />
     @*<meta itemprop="datePublished" content="2015-02-05T08:00:00+08:00"/>
-    <meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00"/>*@
+        <meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00"/>*@
 </div>

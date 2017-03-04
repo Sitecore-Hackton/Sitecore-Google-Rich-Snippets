@@ -1,3 +1,4 @@
+using System.Web;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
@@ -18,26 +19,31 @@ namespace Sitecore.Feature.GoogleStructureData.FieldValueResolvers
             _dataField = dataField;
         }
 
-        public ID GetFieldId(Item item)
+        public HtmlString Field()
+        {
+            return _dataField.Render();
+        }
+
+        public ID GetFieldId()
         {
             if (!_dataField.IsEditable)
-                return null;
+                return ID.Null;
 
             if (!_fieldId.IsNull)
             {
                 return _fieldId;
             }
 
-            var field = _dataField.Execute(item) as Field;
+            var field = _dataField.Execute() as Field;
             if (field == null)
-                return null;
+                return ID.Null;
 
             return field.ID;
         }
 
-        public T GetFieldValue<T>(Item item)
+        public T GetFieldValue<T>()
         {
-            var value = _dataField.Execute(item);
+            var value = _dataField.Execute();
 
             if (_dataField.IsEditable)
             {
