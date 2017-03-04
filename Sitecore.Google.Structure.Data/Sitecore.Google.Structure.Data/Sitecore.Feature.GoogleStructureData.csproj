@@ -103,9 +103,16 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\GoogleStructureDataController.cs" />
+    <Compile Include="DataFieldTypes\BaseDataField.cs" />
+    <Compile Include="DataFieldTypes\ComputedValueDataField.cs" />
+    <Compile Include="DataFieldTypes\ReferenceItemFieldNameDataField.cs" />
+    <Compile Include="DataFieldTypes\ItemFieldNameDataField.cs" />
     <Compile Include="FieldValueResolvers\BaseFieldValueResolver.cs" />
     <Compile Include="FieldValueResolvers\GetItemUrl.cs" />
     <Compile Include="FieldValueResolvers\GetItemName.cs" />
+    <Compile Include="FieldValueResolvers\DataFieldWrapper.cs" />
+    <Compile Include="Models\OrganizationObject.cs" />
+    <Compile Include="Models\ImageObject.cs" />
     <Compile Include="Models\DataField.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\NavigationItems.cs" />

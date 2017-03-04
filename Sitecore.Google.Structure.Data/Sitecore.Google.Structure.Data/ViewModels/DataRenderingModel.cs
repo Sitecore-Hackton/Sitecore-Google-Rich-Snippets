@@ -2,6 +2,7 @@
 using System.Web;
 using Sitecore.Data;
 using Sitecore.Data.Items;
+using Sitecore.Feature.GoogleStructureData.DataFieldTypes;
 using Sitecore.Feature.GoogleStructureData.FieldValueResolvers;
 using Sitecore.Feature.GoogleStructureData.Models;
 using Sitecore.Foundation.SitecoreExtensions.Extensions;
@@ -12,33 +13,32 @@ namespace Sitecore.Feature.GoogleStructureData.ViewModels
 {
     public class DataRenderingModel : RenderingModel
     {
-        private IDictionary<string, FieldInfo> _fields = new Dictionary<string, FieldInfo>();
+        private IDictionary<string, DataFieldWrapper> _fields = new Dictionary<string, DataFieldWrapper>();
 
         public override void Initialize(Rendering rendering)
         {
             base.Initialize(rendering);
-            var title = new DataField()
+
+            var title = new ItemFieldNameDataField()
             {
-                FieldName = "NewsTitle",
-                TypeName = "Sitecore.Feature.GoogleStructureData.FieldValueResolvers.GetItemName,Sitecore.Feature.GoogleStructureData"
+                ItemFieldName = "NewsTitle",
             };
 
-            _fields.Add(Constants.Items.ArticleFieldItems.HeadlineFieldID.ToString(), new FieldInfo(title));
+            _fields.Add(Constants.Items.ArticleFieldItems.HeadlineFieldID.ToString(), new DataFieldWrapper(title));
 
-            var mainentryofpage = new DataField()
+            var mainentryofpage = new ComputedValueDataField()
             {
-                FieldName = "",
                 TypeName = "Sitecore.Feature.GoogleStructureData.FieldValueResolvers.GetItemUrl,Sitecore.Feature.GoogleStructureData"
             };
 
-            _fields.Add(Constants.Items.ArticleFieldItems.MainEntryofPageFieldID.ToString(), new FieldInfo(mainentryofpage));
+            _fields.Add(Constants.Items.ArticleFieldItems.MainEntryofPageFieldID.ToString(), new DataFieldWrapper(mainentryofpage));
         }
 
         public bool HasValueFor(ID fieldId)
         {
             if (FieldExists(fieldId))
             {
-                return !string.IsNullOrEmpty(_fields[fieldId.ToString()].GetFieldValue(this.Rendering.Item));
+                return !string.IsNullOrEmpty(_fields[fieldId.ToString()].GetFieldValue<string>(this.Rendering.Item));
             }
 
             return false;
@@ -49,11 +49,11 @@ namespace Sitecore.Feature.GoogleStructureData.ViewModels
             return _fields.ContainsKey(fieldId.ToString());
         }
 
-        public string GetValue(ID fieldId)
+        public string GetStringValue(ID fieldId)
         {
             if (FieldExists(fieldId))
             {
-                return _fields[fieldId.ToString()].GetFieldValue(this.Rendering.Item);
+                return _fields[fieldId.ToString()].GetFieldValue<string>(this.Rendering.Item);
             }
 
             return string.Empty;

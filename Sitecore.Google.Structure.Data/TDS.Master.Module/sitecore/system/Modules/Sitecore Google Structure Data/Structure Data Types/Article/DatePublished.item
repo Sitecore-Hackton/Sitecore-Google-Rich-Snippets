@@ -1,27 +1,27 @@
 ----item----
 version: 1
-id: {2900D215-9EE3-4CC7-B7E6-B7D78217EB9A}
+id: {09614B5F-689B-437B-86D5-E33EB200D0BD}
 database: master
-path: /sitecore/system/Modules/Sitecore Google Structure Data/Structure Data Types/Article/MainEntryOfPage
+path: /sitecore/system/Modules/Sitecore Google Structure Data/Structure Data Types/Article/DatePublished
 parent: {FBDE3F28-6E51-4463-9597-71659833711F}
-name: MainEntryOfPage
+name: DatePublished
 master: {00000000-0000-0000-0000-000000000000}
-template: {9ED0BB09-419A-4D0D-8875-315283BF5CE0}
-templatekey: Computed Value Data Field
-created: 20170304T095827Z
+template: {6DAEA56C-DB28-4FC1-A507-38F0E8FA1840}
+templatekey: Item Field Name Data Field
+created: 20170304T124330Z
 
 ----version----
 language: en
 version: 1
-revision: f08f673d-bb07-49d8-a451-88f43a49bfaa
+revision: 2c07827e-af8e-48a4-ac6e-92b07843b41c
 
 ----field----
-field: {8A9E7CC8-4742-40CC-9970-91357893D904}
-name: Type Name
-key: type name
-content-length: 104
+field: {0FF49C1D-0CC4-44CE-BB7A-E5A2BF213818}
+name: Item Field Name
+key: item field name
+content-length: 11
 
-Sitecore.Feature.GoogleStructureData.FieldValueResolvers.GetItemUrl,Sitecore.Feature.GoogleStructureData
+PublishDate
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f08f673d-bb07-49d8-a451-88f43a49bfaa
+2c07827e-af8e-48a4-ac6e-92b07843b41c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T140701Z
+20170304T140736Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

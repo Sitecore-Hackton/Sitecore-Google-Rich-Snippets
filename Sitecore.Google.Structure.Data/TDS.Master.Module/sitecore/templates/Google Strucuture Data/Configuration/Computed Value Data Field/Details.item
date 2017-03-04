@@ -1,27 +1,20 @@
 ----item----
 version: 1
-id: {07EA7C29-1CE3-4304-8AEC-9C5E851571D1}
+id: {37ABA03A-22E1-4AA8-9C35-87957BBAC93D}
 database: master
-path: /sitecore/system/Modules/Sitecore Google Structure Data/Structure Data Types/Article/Headline
-parent: {FBDE3F28-6E51-4463-9597-71659833711F}
-name: Headline
+path: /sitecore/templates/Google Strucuture Data/Configuration/Computed Value Data Field/Details
+parent: {9ED0BB09-419A-4D0D-8875-315283BF5CE0}
+name: Details
 master: {00000000-0000-0000-0000-000000000000}
-template: {6DAEA56C-DB28-4FC1-A507-38F0E8FA1840}
-templatekey: Item Field Name Data Field
-created: 20170304T095650Z
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
+created: 20170304T140538Z
 
 ----version----
 language: en
 version: 1
-revision: ed60f5db-2c76-4043-aeba-e4b13382ab65
+revision: 5d3a4fce-dd32-4997-9a01-0c16717b46b1
 
-----field----
-field: {0FF49C1D-0CC4-44CE-BB7A-E5A2BF213818}
-name: Item Field Name
-key: item field name
-content-length: 9
-
-NewsTitle
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -35,28 +28,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20170304T095650Z
-----field----
-field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
-name: __Created by
-key: __created by
-content-length: 14
-
-sitecore\Admin
+20170304T051010Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-ed60f5db-2c76-4043-aeba-e4b13382ab65
+5d3a4fce-dd32-4997-9a01-0c16717b46b1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T095805Z
+20170304T140559Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

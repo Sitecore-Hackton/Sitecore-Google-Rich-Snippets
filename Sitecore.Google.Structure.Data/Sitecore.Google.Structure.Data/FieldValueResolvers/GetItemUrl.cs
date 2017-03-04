@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Sitecore.Data.Items;
 using Sitecore.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.Links;
 
 namespace Sitecore.Feature.GoogleStructureData.FieldValueResolvers
 {
@@ -12,7 +13,9 @@ namespace Sitecore.Feature.GoogleStructureData.FieldValueResolvers
         public override string Execute(object value)
         {
             var item = value as Item;
-            return item != null ? item.Url() : string.Empty;
+            var options = LinkManager.GetDefaultUrlOptions();
+            options.AlwaysIncludeServerUrl = true;
+            return item != null ? item.Url(options) : string.Empty;
         }
     }
 }
